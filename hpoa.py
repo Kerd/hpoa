@@ -806,7 +806,12 @@ anonymous_methods = [
     'getLanguages',
     'getLdapTestStatus',
     'getOaId',
+    'getOaInfo',
+    'getOaInfoArray',
+    'getOaStatus',
+    'getOaStatusArray',
     'getOaSessionTimeout',
+    'getOaUpTime',
     'getOaVcmMode',
     'getRackTopology',
     'getRackTopology2',
@@ -973,7 +978,11 @@ if __name__ == "__main__":
         api = hpoa.HPOA(address)
         print("Anonymous login...")
     
-    api.login()
+    try:
+        api.login()
+    except Exception as e:
+        print(e)
+        sys.exit(2)
 
     print("Get Rack Topology...")
     po(api.getRackTopology2())
