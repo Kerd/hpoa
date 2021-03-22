@@ -972,11 +972,11 @@ if __name__ == "__main__":
 
     if username is not None:
         password = getpass.getpass('Password:')
-        api = hpoa.HPOA(address, username, password)
         print("Authorize to OA...")
+        api = hpoa.HPOA(address, username, password)
     else:
-        api = hpoa.HPOA(address)
         print("Anonymous login...")
+        api = hpoa.HPOA(address)
     
     try:
         api.login()
