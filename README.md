@@ -1,6 +1,6 @@
 # hpoa
 Python API for HP Insight Onboard Administrator SOAP Interface.<br>
-Use this library to read and update BladeSystem c7000 and c3000 configuration.
+Use this library to read and update HP BladeSystem c7000 and c3000 configuration.
 
 Tested on c7000 only.
 
@@ -39,7 +39,11 @@ po(api.getOaStatusArray(range(1,3)))
 
 ```
 
-Check bottom of [hpoa.py](hpoa.py) for example.
+Check bottom of [hpoa.py](hpoa.py) for example, and execute it like this:
+
+```bash
+python ./hpoa.py c7000-oa1 Administrator
+```
 
 Interface methods and their parameters are described in `hpoa.methods`. Or you may use `help(hpoa)`.
 Not all data types were implemented, so if you not only want to retrieve configuration and inventory information
